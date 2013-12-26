@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/allenlsy/.rvm/gems/ruby-2.0.0-p353/gems/thor-0.18.1'
 let g:netrw_dirhist_2='/Users/allenlsy/.rvm/gems/ruby-2.0.0-p353/gems/highline-1.6.20'
 let g:netrw_dirhist_3='/Users/allenlsy/.rvm/gems/ruby-2.0.0-p353@neo/gems/ffaker-1.22.1'
 let g:netrw_dirhist_4='/Users/allenlsy/project/dotfiles'
 let g:netrw_dirhist_5='/Users/allenlsy/.rvm/gems/ruby-2.0.0-p353/gems/rails-4.0.1'
 let g:netrw_dirhist_6='/Users/allenlsy/project/dotfiles'
+let g:netrw_dirhist_7='/Users/allenlsy/project/tcasia'
+let g:netrw_dirhist_8='/Users/allenlsy/project/neo'
