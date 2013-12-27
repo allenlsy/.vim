@@ -61,9 +61,15 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "bundle/vim-sparkup"]
-	path = bundle/vim-sparkup
-	url = https://github.com/tristen/vim-sparkup
+[submodule "bundle/vim-trailing-whitespace"]
+	path = bundle/vim-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace
+[submodule "bundle/ag.vim"]
+	path = bundle/ag.vim
+	url = https://github.com/rking/ag.vim
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim
+[submodule "bundle/vim-sparkup"]
+	path = bundle/vim-sparkup
+	url = https://github.com/tristen/vim-sparkup
