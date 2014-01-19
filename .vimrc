@@ -1,3 +1,4 @@
+set t_Co=256
 call pathogen#infect()
 
 syntax on
@@ -7,7 +8,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-
+set bg=dark
 set pastetoggle=<F2>
 set showmode
 
@@ -58,6 +59,16 @@ set helplang=cn
 set hlsearch
 
 set cursorline
+:highlight CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=gray guifg=white
+set cursorcolumn
+
+" augroup Cursor
+"   au!
+"   au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
+"   au WinLeave * setlocal nocursorcolumn
+"   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"   au WinLeave * setlocal nocursorline
+" augroup END
 
 " vundle configuration
 
@@ -85,3 +96,25 @@ augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
+
+au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
+au BufNewFile,BufRead *.scss set filetype=css " enable rainbow mode in scss file
+au FileType coffee :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
+
+
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_smart_startup_focus=2
+
+let g:cssColorVimDoNotMessMyUpdatetime = 10
+
+" Autoload RaibowParentheses. For performance reason, I disabled it by default
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
+" au Syntax * RainbowParenthesesLoadChevrons
+
+let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+if isdirectory(s:clang_library_path)
+    let g:clang_library_path=s:clang_library_path
+endif
