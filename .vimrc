@@ -2,7 +2,7 @@ set t_Co=256
 call pathogen#infect()
 
 syntax on
-colorscheme Tomorrow-Night-Bright
+colorscheme kellys
 set number
 set expandtab
 set tabstop=4
@@ -118,3 +118,13 @@ let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
 if isdirectory(s:clang_library_path)
     let g:clang_library_path=s:clang_library_path
 endif
+
+" lightline config
+let g:powerline_symbols = 'fancy'
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
