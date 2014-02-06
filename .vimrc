@@ -128,3 +128,6 @@ let g:lightline = {
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
+
+" tagbar
+nmap <F7> :TagbarToggle<CR>
