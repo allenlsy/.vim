@@ -131,3 +131,6 @@ let g:lightline = {
 
 " tagbar
 nmap <F7> :TagbarToggle<CR>
+
+" gundo
+nnoremap <F5> :GundoToggle<CR>
