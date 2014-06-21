@@ -2,7 +2,7 @@ set t_Co=256
 call pathogen#infect()
 
 syntax on
-colorscheme kellys
+colorscheme molokai
 set number
 set expandtab
 set tabstop=4
@@ -59,8 +59,8 @@ set helplang=cn
 set hlsearch
 
 set cursorline
-:highlight CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=gray guifg=white
-set cursorcolumn
+" :highlight CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=gray guifg=white
+" set cursorcolumn
 
 " augroup Cursor
 "   au!
@@ -100,6 +100,8 @@ augroup END
 au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
 au BufNewFile,BufRead *.scss set filetype=css " enable rainbow mode in scss file
 au FileType coffee :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
+au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
+
 
 
 let g:nerdtree_tabs_open_on_console_startup=1
@@ -114,7 +116,7 @@ let g:cssColorVimDoNotMessMyUpdatetime = 10
 " au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
 
-let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+let s:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 if isdirectory(s:clang_library_path)
     let g:clang_library_path=s:clang_library_path
 endif
