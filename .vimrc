@@ -2,7 +2,7 @@ set t_Co=256
 call pathogen#infect()
 
 syntax on
-colorscheme molokai
+colorscheme nevfn
 set number
 set expandtab
 set tabstop=4
