@@ -188,3 +188,8 @@ nmap <F7> :TagbarToggle<CR>
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
+
+" config color theme for git vimdiff
+if &diff
+    colorscheme kellys
+endif
