@@ -1,8 +1,10 @@
+set shell=/bin/zsh
 set t_Co=256
 call pathogen#infect()
 
 syntax on
-colorscheme nevfn
+set nocompatible
+colorscheme Tomorrow-Night-Bright
 set number
 set expandtab
 set tabstop=4
@@ -11,6 +13,7 @@ set autoindent
 set bg=dark
 set pastetoggle=<F2>
 set showmode
+set smartcase
 
 set fileencodings=utf-8
 set encoding=utf-8
@@ -98,10 +101,9 @@ augroup BWCCreateDir
 augroup END
 
 au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
-au BufNewFile,BufRead *.scss set filetype=css " enable rainbow mode in scss file
 au FileType coffee :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
 au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
-
+au! FileType scss runtime! after/syntax/css.vim
 
 
 let g:nerdtree_tabs_open_on_console_startup=1
@@ -193,3 +195,20 @@ nnoremap <F5> :GundoToggle<CR>
 if &diff
     colorscheme kellys
 endif
+
+" tern-for-vim
+imap <C-J> <Plug>snipMateNextOrTrigger
+
+" markdown from plasticboy
+let g:vim_markdown_folding_disabled=1 " disable folding
+
+" config ctrlp-funky
+let g:ctrlp_extensions = ['funky']
+let g:ctrlp_funky_syntax_highlight = 1
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+" vim-json
+let g:vim_json_syntax_conceal = 0
+

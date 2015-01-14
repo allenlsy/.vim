@@ -118,3 +118,15 @@
 [submodule "bundle/ctrlp-funky"]
 	path = bundle/ctrlp-funky
 	url = git://github.com/tacahiroy/ctrlp-funky.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim-rvm"]
+	path = vim-rvm
+	url = git://github.com/tpope/vim-rvm.git
+[submodule "bundle/vim-rvm"]
+	path = bundle/vim-rvm
+	url = git://github.com/tpope/vim-rvm.git
+[submodule "bundle/vim-mustache-handlebars"]
+	path = bundle/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
