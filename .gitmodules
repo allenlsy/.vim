@@ -1,3 +1,6 @@
+[submodule "bundle/Vundle.vim"]
+	path = bundle/Vundle.vim
+	url = git@github.com:gmarik/Vundle.vim.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
@@ -130,3 +133,10 @@
 [submodule "bundle/vim-mustache-handlebars"]
 	path = bundle/vim-mustache-handlebars
 	url = git@github.com:mustache/vim-mustache-handlebars.git
+[submodule "bundle/lightline.vim"]
+	path = bundle/lightline.vim
+    url = git@github.com:itchyny/lightline.vim.git
+[submodule "bundle/vim-mustache-handlebars"]
+	path = bundle/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
+
