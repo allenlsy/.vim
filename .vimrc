@@ -49,7 +49,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-cucumber'
-
+Plugin 'Yggdroot/indentLine'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
