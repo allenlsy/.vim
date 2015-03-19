@@ -46,11 +46,21 @@ Plugin 'tpope/vim-rvm'
 Plugin 'tristen/vim-sparkup'
 Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-cucumber'
 Plugin 'Yggdroot/indentLine'
 Plugin 'fatih/vim-go'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'Shougo/neocomplcache.vim'
+" Plugin 'AutoComplPop'
+Plugin 'jimenezrick/vimerl'
+Plugin 'chriskempson/base16-vim'
+" Plugin 'msanders/snipmate.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,7 +86,7 @@ set hlsearch
 set cursorline
 
 " auto create new parent folder after creating new file
-function s:MkNonExDir(file, buf)
+function! s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
         let dir=fnamemodify(a:file, ':h')
         if !isdirectory(dir)
@@ -88,7 +98,6 @@ augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
-
 
 " NERDTree
 " =============
@@ -127,6 +136,13 @@ let g:clang_complete_copen = 1
 " EasyMotion
 " ============
 let g:EasyMotion_leader_key = '<Leader>'
+
+" better white space
+" ==================
+augroup WhiteSpace
+    au!
+    au VimEnter * silent! ToggleStripWhitespaceOnSave
+augroup END
 
 " HTML format
 " ==============

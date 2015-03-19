@@ -1,4 +1,4 @@
-set guifont=Source\ Code\ Pro:h14
+set guifont=Source\ Code\ Pro:h13
 set transparency=10
 
 set macmeta
@@ -24,4 +24,8 @@ noremap <D-9> :tabn 9<CR>
 " Command-0 goes to the last tab
 " noremap <D-0> :tablast<CR>
 endif
-" "
+"
+
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
