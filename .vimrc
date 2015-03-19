@@ -2,14 +2,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 set backspace=indent,eol,start
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 " ===============
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -42,7 +41,6 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rvm'
 Plugin 'tristen/vim-sparkup'
 Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -56,11 +54,12 @@ Plugin 'Shougo/neocomplcache.vim'
 " Plugin 'AutoComplPop'
 Plugin 'jimenezrick/vimerl'
 Plugin 'chriskempson/base16-vim'
-" Plugin 'msanders/snipmate.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plugin 'msanders/snipmate.vim'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,12 +68,13 @@ filetype plugin indent on    " required
 " Editor config
 " =============
 colorscheme Tomorrow-Night-Bright
+" set shell=/bin/sh
 set shell=/bin/zsh
 set t_Co=256
 set number
 set expandtab
-set tabstop=4
-set shiftwidth=4
+" set tabstop=2
+" set shiftwidth=2
 set autoindent
 set bg=dark
 set pastetoggle=<F2>
@@ -99,6 +99,7 @@ augroup BWCCreateDir
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
 
+
 " NERDTree
 " =============
 "solve NERDTree with zsh
@@ -113,6 +114,10 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
 au FileType coffee :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
 au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
+au FileType ruby :setlocal sw=2 ts=2 sts=2 " tab size=2 for ruby
+au BufNewFile,BufRead *.go set filetype=go
+au BufNewFile,BufRead *.md set filetype=markdown
+au FileType markdown :setlocal sw=4 ts=4 sts=4
 
 " OmniCppComplete
 " ===============
@@ -143,6 +148,7 @@ augroup WhiteSpace
     au!
     au VimEnter * silent! ToggleStripWhitespaceOnSave
 augroup END
+
 
 " HTML format
 " ==============
@@ -261,3 +267,7 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " ==========
 let g:vim_json_syntax_conceal = 0
 
+" neocomplete
+" =============
+let g:neocomplcache_enable_at_startup = 1
+let g:acp_enableAtStartup = 1
