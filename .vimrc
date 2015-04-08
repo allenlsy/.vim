@@ -59,7 +59,9 @@ Plugin 'msanders/snipmate.vim'
 " Plugin 'tomtom/tlib_vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'honza/vim-snippets'
-
+Plugin 'tfnico/vim-gradle'
+Plugin 'vim-jp/vim-cpp'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,6 +120,13 @@ au FileType ruby :setlocal sw=2 ts=2 sts=2 " tab size=2 for ruby
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.md set filetype=markdown
 au FileType markdown :setlocal sw=4 ts=4 sts=4
+au FileType cpp :setlocal sw=4 ts=4 sts=4
+
+
+" C indent
+" ==========
+set cindent
+set cinoptions+=g0
 
 " OmniCppComplete
 " ===============
@@ -137,6 +146,13 @@ set pumheight=15
 " let g:clang_complete_auto = 0
 " Show clang errors in the quickfix window
 let g:clang_complete_copen = 1
+" autocmd FileType cpp set omnifunc=omni#cpp#complete#Main
+
+
+" Tags
+" =====
+set tags+=~/.vim/wxwidgetstags
+
 
 " EasyMotion
 " ============

@@ -1,8 +1,11 @@
-set guifont=Source\ Code\ Pro:h13
+" set guifont=Source\ Code\ Pro:h13
+set guifont=Monaco:h13
 set transparency=10
+set linespace=2
 
 set macmeta
 set bg=dark
+color base16-chalk
 
 if has("gui_macvim")
 " In MacVim, you can have multiple tabs open. This mapping makes Ctrl-Tab
