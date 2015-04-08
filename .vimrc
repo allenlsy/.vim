@@ -86,6 +86,8 @@ set fileencodings=utf-8
 set encoding=utf-8
 set hlsearch
 set cursorline
+set foldmethod=syntax
+set foldlevel=99
 
 " auto create new parent folder after creating new file
 function! s:MkNonExDir(file, buf)
