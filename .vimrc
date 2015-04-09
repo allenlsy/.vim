@@ -51,7 +51,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'fatih/vim-go'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'Shougo/neocomplcache.vim'
-" Plugin 'AutoComplPop'
+Plugin 'AutoComplPop'
 Plugin 'jimenezrick/vimerl'
 Plugin 'chriskempson/base16-vim'
 Plugin 'msanders/snipmate.vim'
@@ -87,7 +87,9 @@ set encoding=utf-8
 set hlsearch
 set cursorline
 set foldmethod=syntax
-set foldlevel=99
+set foldlevel=1
+set nofoldenable
+
 
 " auto create new parent folder after creating new file
 function! s:MkNonExDir(file, buf)
@@ -289,3 +291,4 @@ let g:vim_json_syntax_conceal = 0
 " =============
 let g:neocomplcache_enable_at_startup = 1
 let g:acp_enableAtStartup = 1
+let g:acp_behaviorSnipmateLength = 3
