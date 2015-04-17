@@ -4,6 +4,7 @@ let g:indentLine_color_tty_light = 7
 let g:indentLine_char = '|'
 set transparency=10
 set linespace=2
+set lines=999 columns=999
 
 set macmeta
 set bg=dark

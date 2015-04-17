@@ -51,7 +51,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'fatih/vim-go'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'Shougo/neocomplcache.vim'
-Plugin 'AutoComplPop'
+" Plugin 'AutoComplPop'
 Plugin 'jimenezrick/vimerl'
 Plugin 'chriskempson/base16-vim'
 Plugin 'msanders/snipmate.vim'
@@ -62,6 +62,7 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'thoughtbot/vim-rspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
