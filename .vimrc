@@ -1,8 +1,8 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-syntax on
+filetype off
 set backspace=indent,eol,start
 set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
@@ -22,7 +22,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 " Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-bundler'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'ap/vim-css-color'
 " Plugin 'gorodinskiy/vim-coloresque'
@@ -63,9 +62,14 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'slim-template/vim-slim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+syntax enable
+filetype on                  " required
 filetype plugin indent on    " required
 
 " Editor config
@@ -119,8 +123,8 @@ let g:nerdtree_tabs_smart_startup_focus=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
-au FileType coffee :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
-au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for coffeescript
+au BufNewFile,BufReadPost *.coffee setl sw=2 ts=2 sts=2 expandtab
+au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for yml
 au FileType ruby :setlocal sw=2 ts=2 sts=2 " tab size=2 for ruby
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.md set filetype=markdown
