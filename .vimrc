@@ -137,6 +137,10 @@ au FileType cpp :setlocal sw=4 ts=4 sts=4
 set cindent
 set cinoptions+=g0
 
+" IndentLine
+let g:indentLine_char = '│'
+
+
 " OmniCppComplete
 " ===============
 let OmniCpp_NamespaceSearch = 1
