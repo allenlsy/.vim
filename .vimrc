@@ -53,11 +53,11 @@ Plugin 'Shougo/neocomplcache.vim'
 " Plugin 'AutoComplPop'
 Plugin 'jimenezrick/vimerl'
 Plugin 'chriskempson/base16-vim'
-Plugin 'msanders/snipmate.vim'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'honza/vim-snippets'
+" Plugin 'msanders/snipmate.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -276,9 +276,9 @@ if &diff
     colorscheme kellys
 endif
 
-" tern-for-vim
-" =====================
-imap <C-J> <Plug>snipMateNextOrTrigger
+" snipmate config
+" ================
+" let g:snips_trigger_key = '<TAB>'
 
 " markdown from plasticboy
 " ====================
