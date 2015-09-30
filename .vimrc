@@ -72,6 +72,11 @@ syntax enable
 filetype on                  " required
 filetype plugin indent on    " required
 
+" solve vim slow problem
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
+
 " Editor config
 " =============
 colorscheme Tomorrow-Night-Bright
@@ -124,8 +129,9 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 au BufNewFile,BufRead *.hbs set filetype=html " handlebar template as html
 au BufNewFile,BufReadPost *.coffee setl sw=2 ts=2 sts=2 expandtab
-au FileType yml :setlocal sw=2 ts=2 sts=2 " tab size=2 for yml
-au FileType ruby :setlocal sw=2 ts=2 sts=2 " tab size=2 for ruby
+au FileType yml :set sw=2 ts=2 sts=2 " tab size=2 for yml
+au FileType ruby :set sw=2 ts=2 sts=2 " tab size=2 for ruby
+au FileType slim :set sw=2 ts=2 sts=2
 au BufNewFile,BufRead *.go set filetype=go
 au BufNewFile,BufRead *.md set filetype=markdown
 au FileType markdown :setlocal sw=4 ts=4 sts=4
